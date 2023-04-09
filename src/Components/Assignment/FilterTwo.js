@@ -1,5 +1,7 @@
 import { IconButton, InputBase, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TablePagination, TableRow, TextField } from '@mui/material';
 import React from 'react'
+import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
+import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 
 const FilterTwo = () => {
     const useSortableData = (items, config = null) => {
@@ -66,8 +68,8 @@ const FilterTwo = () => {
                 <Table sx={{ minWidth: 650 }} aria-label="simple table">
                     <TableHead>
                         <TableRow>
-                            <TableCell onClick={() => requestSort('name')}>1 Click Capital Products</TableCell>
-                            <TableCell align="right" onClick={() => requestSort('price')}>Price ( In Lac per Year)</TableCell>
+                            <TableCell onClick={() => requestSort('name')}>1 Click Capital Products {sortConfig && sortConfig.direction === 'ascending'?<ArrowUpwardIcon/>:<ArrowDownwardIcon/>} </TableCell>
+                            <TableCell align="right" onClick={() => requestSort('price')}>Price ( In Lac per Year) {sortConfig && sortConfig.direction === 'ascending'?<ArrowUpwardIcon/>:<ArrowDownwardIcon/>}  </TableCell>
                         </TableRow>
                     </TableHead>
                     <TableBody>

@@ -1,6 +1,8 @@
 import { IconButton, InputBase, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, TextField } from '@mui/material';
 import React from 'react'
 import SearchIcon from '@mui/icons-material/Search';
+import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
+import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 
 const FilterOne = () => {
 
@@ -57,8 +59,8 @@ const FilterOne = () => {
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
         <TableHead>
           <TableRow>
-            <TableCell onClick={() => requestSort('name')}>Skills </TableCell>
-            <TableCell align="right" onClick={() => requestSort('Star')}>Star</TableCell>        
+            <TableCell onClick={() => requestSort('name')}>Skills {sortConfig && sortConfig.direction === 'ascending'?<ArrowUpwardIcon/>:<ArrowDownwardIcon/>}</TableCell>
+            <TableCell align="right" onClick={() => requestSort('Star')}>Star (Out of 10){sortConfig && sortConfig.direction === 'ascending'?<ArrowUpwardIcon/>:<ArrowDownwardIcon/>}</TableCell>        
           </TableRow>
         </TableHead>
         <TableBody>
