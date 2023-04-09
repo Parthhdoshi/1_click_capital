@@ -45,7 +45,7 @@ const FilterThree = () => {
       
       const ProductTable = (props) => {
         const { items, requestSort, sortConfig } = useSortableData(props.products);
-        const [rowsPerPage, setRowsPerPage] = React.useState(5);
+        const [rowsPerPage, setRowsPerPage] = React.useState(3);
         const [page, setPage] = React.useState(0);
         const [searchTerm, setSearchTerm] = React.useState("");
 
