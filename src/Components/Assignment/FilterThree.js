@@ -105,6 +105,7 @@ const FilterThree = () => {
                 <Table sx={{ minWidth: 650 }} aria-label="simple table">
                     <TableHead>
                         <TableRow>
+                            <TableCell></TableCell>
                             <TableCell onClick={() => requestSort('name')}>1 click Capital Blogs</TableCell>
                             <TableCell align="right">Date</TableCell>
                             <TableCell align="right" onClick={() => requestSort('popularity')}></TableCell>
@@ -116,6 +117,7 @@ const FilterThree = () => {
                                 key={item.id}
                                 sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                             >
+                                <img src={item.rttpg_featured_image_url.thumbnail[0]} width={100}/>
                                 <TableCell component="th" scope="row">
                                     {item.rttpg_excerpt.split("&hellip;")[0] + "..."}
                                 </TableCell>
