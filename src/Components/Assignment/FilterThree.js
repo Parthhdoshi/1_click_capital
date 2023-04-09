@@ -95,7 +95,7 @@ const FilterThree = () => {
             >
               <InputBase
                 sx={{ ml: 1, flex: 1 }}
-                placeholder="Search Broker by name"
+                placeholder="Search Blog"
                 onChange={handleSearch}
                 inputRef={input => input && input.focus()}
                 autoFocus={true}
