@@ -1,4 +1,4 @@
-import { Alert, IconButton, InputBase, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TablePagination, TableRow, TextField } from '@mui/material';
+import { Alert, Button, IconButton, InputBase, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TablePagination, TableRow, TextField } from '@mui/material';
 import React, { useEffect } from 'react'
 
 const FilterThree = () => {
@@ -105,9 +105,9 @@ const FilterThree = () => {
                 <Table sx={{ minWidth: 650 }} aria-label="simple table">
                     <TableHead>
                         <TableRow>
-                            <TableCell onClick={() => requestSort('name')}>1 Capital Blogs</TableCell>
+                            <TableCell onClick={() => requestSort('name')}>1 click Capital Blogs</TableCell>
                             <TableCell align="right">Date</TableCell>
-                            <TableCell align="right" onClick={() => requestSort('popularity')}>Popularity</TableCell>
+                            <TableCell align="right" onClick={() => requestSort('popularity')}></TableCell>
                         </TableRow>
                     </TableHead>
                     <TableBody>
@@ -120,7 +120,7 @@ const FilterThree = () => {
                                     {item.rttpg_excerpt.split("&hellip;")[0] + "..."}
                                 </TableCell>
                                 <TableCell align="right">{new Date(item.modified).toLocaleDateString()}</TableCell>
-                                <TableCell align="right" onClick={() => window.open(item.link)} sx={{ cursor: "pointer" }}>CLick here</TableCell>
+                                <TableCell align="right" onClick={() => window.open(item.link)} sx={{ cursor: "pointer" }}><Button>CLick here</Button> </TableCell>
                             </TableRow>
                         ))}
                     </TableBody>
